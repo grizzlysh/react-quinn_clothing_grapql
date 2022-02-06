@@ -21,7 +21,10 @@ const GET_COLLECTIONS_BY_TITLE = gql`
 `;
 
 const CollectionPageContainer = ({ match }) => (
-    <Query query={GET_COLLECTIONS_BY_TITLE} variables={{ title: match.params.collectionId }} >
+    <Query 
+        query={GET_COLLECTIONS_BY_TITLE} 
+        variables={{ title: match.params.collectionId }} 
+    >
         {
             ({ loading, data }) =>  {
 
